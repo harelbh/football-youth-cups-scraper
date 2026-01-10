@@ -15,7 +15,7 @@ services:
   - type: cron
     name: football-scraper-cron
     env: python
-    schedule: "*/5 * * * *"  # כל 5 דקות
+    schedule: "*/5 * * * *"
     buildCommand: |
       pip install -r requirements_render.txt
       apt-get update
