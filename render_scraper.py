@@ -223,17 +223,16 @@ def setup_git():
         subprocess.run(['git', 'config', '--global', 'user.email', GITHUB_EMAIL], check=True)
         subprocess.run(['git', 'config', '--global', 'user.name', GITHUB_NAME], check=True)
         
-        # Clone או pull
+        # Clone מחדש כל פעם (למנוע קונפליקטים)
         repo_url = f"https://{GITHUB_TOKEN}@github.com/{GITHUB_REPO}.git"
         
-        if not os.path.exists('repo'):
-            print("📦 Cloning repository...")
-            subprocess.run(['git', 'clone', repo_url, 'repo'], check=True)
-        else:
-            print("📥 Pulling latest changes...")
-            os.chdir('repo')
-            subprocess.run(['git', 'pull'], check=True)
-            os.chdir('..')
+        if os.path.exists('repo'):
+            print("🗑️  מוחק repo ישן...")
+            import shutil
+            shutil.rmtree('repo')
+        
+        print("📦 Cloning repository...")
+        subprocess.run(['git', 'clone', repo_url, 'repo'], check=True)
         
         print("✅ Git מוכן!")
         return True
