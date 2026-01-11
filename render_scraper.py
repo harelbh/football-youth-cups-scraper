@@ -1,23 +1,17 @@
 """
-Football Youth Cups Scraper for Railway.app
-שומר נתונים ב-GitHub Pages
+Football Youth Cups Scraper for Railway.app + Flask API
+שומר נתונים מקומית ומספק דרך API
 """
 
 import os
 import json
 import time
 import random
-import subprocess
 from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-# הגדרות מהמשתני סביבה
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
-GITHUB_REPO = os.getenv('GITHUB_REPO', 'harelbh/football-youth-cups-scraper')
-GITHUB_EMAIL = os.getenv('GITHUB_EMAIL', 'bot@railway.app')
-GITHUB_NAME = os.getenv('GITHUB_NAME', 'Railway Bot')
 
 # רשימת הליגות
 YOUTH_CUPS = [
@@ -229,75 +223,19 @@ class YouthCupsScraper:
         self.driver.quit()
 
 
-def setup_git():
-    """הגדר Git עם Token"""
-    print("\n🔧 מגדיר Git...")
+def save_to_local(matches):
+    """שמור נתונים מקומית ל-API"""
+    print(f"\n💾 שומר מקומית...")
     
     try:
-        # הגדר משתמש
-        subprocess.run(['git', 'config', '--global', 'user.email', GITHUB_EMAIL], check=True)
-        subprocess.run(['git', 'config', '--global', 'user.name', GITHUB_NAME], check=True)
-        
-        # Clone מחדש כל פעם (למנוע קונפליקטים)
-        repo_url = f"https://{GITHUB_TOKEN}@github.com/{GITHUB_REPO}.git"
-        
-        if os.path.exists('repo'):
-            print("🗑️  מוחק repo ישן...")
-            import shutil
-            shutil.rmtree('repo')
-        
-        print("📦 Cloning repository...")
-        subprocess.run(['git', 'clone', repo_url, 'repo'], check=True)
-        
-        print("✅ Git מוכן!")
-        return True
-    except Exception as e:
-        print(f"❌ שגיאה בהגדרת Git: {e}")
-        return False
-
-
-def save_to_github(matches):
-    """שמור נתונים ודחוף ל-GitHub"""
-    print(f"\n📤 שומר ל-GitHub...")
-    
-    try:
-        # כנס לתיקיית הRepo
-        os.chdir('repo')
-        
-        # שמור JSON
         with open('matches.json', 'w', encoding='utf-8') as f:
             json.dump(matches, f, ensure_ascii=False, indent=2)
         
-        print("✅ matches.json נשמר")
-        
-        # Commit & Push
-        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
-        subprocess.run(['git', 'add', 'matches.json'], check=True)
-        subprocess.run(['git', 'commit', '-m', f'Update matches - {timestamp}'], check=True)
-        subprocess.run(['git', 'push'], check=True)
-        
-        print(f"✅ נדחף ל-GitHub בהצלחה!")
-        
-        # חזור לתיקייה הראשית
-        os.chdir('..')
+        print(f"✅ matches.json נשמר ({len(matches)} משחקים)")
         return True
         
-    except subprocess.CalledProcessError as e:
-        if 'nothing to commit' in str(e):
-            print("💤 אין שינויים לעדכן")
-            os.chdir('..')
-            return True
-        else:
-            print(f"❌ שגיאה: {e}")
-            os.chdir('..')
-            return False
     except Exception as e:
-        print(f"❌ שגיאה: {e}")
-        try:
-            os.chdir('..')
-        except:
-            pass
+        print(f"❌ שגיאה בשמירה: {e}")
         return False
 
 
@@ -334,12 +272,6 @@ def should_update(matches):
 def main():
     """פונקציה ראשית"""
     print(f"\n🕐 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"📂 Repository: {GITHUB_REPO}")
-    
-    # הגדר Git
-    if not setup_git():
-        print("❌ לא ניתן להמשיך בלי Git")
-        return
     
     scraper = YouthCupsScraper()
     
@@ -351,14 +283,8 @@ def main():
             print("❌ לא נמצאו משחקים")
             return
         
-        # בדוק אם צריך לעדכן
-        if should_update(matches):
-            print(f"\n⚡ יש משחקים פעילים - מעדכן GitHub!")
-            save_to_github(matches)
-        else:
-            print(f"\n💤 אין משחקים פעילים - לא מעדכן")
-            # אבל נשמור פעם אחת בכל מקרה
-            save_to_github(matches)
+        # שמור מקומית
+        save_to_local(matches)
     
     except Exception as e:
         print(f"\n❌ שגיאה כללית: {e}")
