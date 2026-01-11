@@ -75,6 +75,16 @@ class YouthCupsScraper:
                 try:
                     date = row.find_element(By.CSS_SELECTOR, '.game-date').text.strip() if row.find_elements(By.CSS_SELECTOR, '.game-date') else ''
                     
+                    # שלוף דקה חיה (אם קיימת)
+                    live_minute = None
+                    try:
+                        live_span = row.find_element(By.CSS_SELECTOR, '.onLive')
+                        live_minute = live_span.text.strip()
+                        if live_minute:
+                            print(f"      🔴 דקה חיה: {live_minute}")
+                    except:
+                        pass
+                    
                     teams = row.find_elements(By.CSS_SELECTOR, '.team-name-text')
                     home_team = teams[0].text.replace('-', '').strip() if len(teams) > 0 else ''
                     away_team = teams[1].text.strip() if len(teams) > 1 else ''
@@ -166,8 +176,11 @@ class YouthCupsScraper:
                     if extra_time or penalties:
                         # יש הארכה או פנדלים - בטוח נגמר
                         status = 'finished'
+                    elif live_minute:
+                        # יש דקה חיה מהאתר - המשחק חי!
+                        status = 'live'
                     elif home_score is not None and away_score is not None:
-                        # יש תוצאה - צריך לבדוק אם המשחק עדיין חי
+                        # יש תוצאה אבל אין דקה חיה - בדוק לפי זמן
                         if date and match_time:
                             try:
                                 from datetime import datetime
@@ -202,6 +215,7 @@ class YouthCupsScraper:
                         'score': {'home': home_score, 'away': away_score},
                         'extraTime': extra_time or None,
                         'penalties': penalties or None,
+                        'liveMinute': live_minute,  # הדקה האמיתית מהאתר!
                         'link': link,
                         'status': status
                     })
