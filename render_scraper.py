@@ -81,14 +81,15 @@ class YouthCupsScraper:
                     field_elements = row.find_elements(By.CSS_SELECTOR, '.table_col.align_content')
                     field = field_elements[2].text.replace('מגרש', '').strip() if len(field_elements) > 2 else ''
                     
-                    # שעה - חיפוש משופר
+                    # שעה - חיפוש משופר עם התמקדות בעמודת השעה
                     match_time = None
                     
-                    # ניסיון 1: חיפוש בכל העמודות
-                    time_elements = row.find_elements(By.CSS_SELECTOR, '.table_col')
-                    for elem in time_elements:
-                        text = elem.text.strip()
-                        # בדיקה אם זה נראה כמו שעה (HH:MM)
+                    # ניסיון 1: חיפוש עמודה עם "שעה" (sr-only)
+                    try:
+                        time_col = row.find_element(By.XPATH, ".//div[@class='table_col'][.//span[@class='sr-only' and contains(text(), 'שעה')]]")
+                        text = time_col.text.strip()
+                        # הסר את המילה "שעה" אם היא שם
+                        text = text.replace('שעה', '').strip()
                         if ':' in text and len(text) >= 4 and len(text) <= 5:
                             parts = text.split(':')
                             if len(parts) == 2:
@@ -97,19 +98,30 @@ class YouthCupsScraper:
                                     minute = int(parts[1])
                                     if 0 <= hour <= 23 and 0 <= minute <= 59:
                                         match_time = text
-                                        break
                                 except:
-                                    continue
+                                    pass
+                    except:
+                        pass
                     
-                    # ניסיון 2: חיפוש ספציפי יותר
+                    # ניסיון 2: חיפוש בכל העמודות (גיבוי)
                     if not match_time:
-                        try:
-                            time_elem = row.find_element(By.XPATH, ".//div[contains(@class, 'table_col') and contains(text(), ':')]")
-                            text = time_elem.text.strip()
-                            if len(text) <= 5 and ':' in text:
-                                match_time = text
-                        except:
-                            pass
+                        time_elements = row.find_elements(By.CSS_SELECTOR, '.table_col')
+                        for elem in time_elements:
+                            text = elem.text.strip()
+                            # נקה טקסט מיותר
+                            text = text.replace('שעה', '').strip()
+                            # בדיקה אם זה נראה כמו שעה (HH:MM)
+                            if ':' in text and len(text) >= 4 and len(text) <= 5:
+                                parts = text.split(':')
+                                if len(parts) == 2:
+                                    try:
+                                        hour = int(parts[0])
+                                        minute = int(parts[1])
+                                        if 0 <= hour <= 23 and 0 <= minute <= 59:
+                                            match_time = text
+                                            break
+                                    except:
+                                        continue
                     
                     result = row.find_element(By.CSS_SELECTOR, '.result').text.replace('תוצאה', '').strip() if row.find_elements(By.CSS_SELECTOR, '.result') else ''
                     
