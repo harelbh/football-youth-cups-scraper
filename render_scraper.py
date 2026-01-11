@@ -1,13 +1,13 @@
 """
-Football Youth Cups Scraper for Render.com
-מעדכן את השרת שלך אוטומטית
+Football Youth Cups Scraper for Railway.app
+שומר נתונים ב-GitHub Pages
 """
 
 import os
 import json
 import time
 import random
-import requests
+import subprocess
 from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -51,7 +51,6 @@ class YouthCupsScraper:
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
         ]
         options.add_argument(f'user-agent={random.choice(user_agents)}')
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -83,7 +82,7 @@ class YouthCupsScraper:
                     field_elements = row.find_elements(By.CSS_SELECTOR, '.table_col.align_content')
                     field = field_elements[2].text.replace('מגרש', '').strip() if len(field_elements) > 2 else ''
                     
-                    # שעה - חיפוש בעמודת השעה (עם DEBUG)
+                    # שעה - חיפוש משופר עם DEBUG
                     match_time = None
                     
                     try:
@@ -110,14 +109,10 @@ class YouthCupsScraper:
                                         if 0 <= hour <= 23 and 0 <= minute <= 59:
                                             match_time = time_text
                                             print(f"      ✅ שעה נמצאה: {match_time}")
-                                        else:
-                                            print(f"      ❌ שעה לא תקינה: {hour}:{minute}")
                                     except Exception as e:
                                         print(f"      ❌ שגיאה בפרסור: {e}")
-                            else:
-                                print(f"      ❌ אין ':' בטקסט")
                         else:
-                            print(f"      ⚠️  לא נמצאה עמודת שעה")
+                            print(f"      ⚠️  לא נמצאה עמודת שעה - מנסה גיבוי")
                             
                     except Exception as e:
                         print(f"      ❌ שגיאה בחיפוש שעה: {e}")
@@ -126,13 +121,9 @@ class YouthCupsScraper:
                     if not match_time:
                         try:
                             all_cols = row.find_elements(By.CSS_SELECTOR, '.table_col')
-                            print(f"      🔍 גיבוי: בודק {len(all_cols)} עמודות")
                             
-                            for idx, col in enumerate(all_cols):
+                            for col in all_cols:
                                 text = col.text.strip()
-                                if text:  # רק אם יש טקסט
-                                    print(f"      עמודה {idx}: '{text}'")
-                                
                                 # נקה תווים מיוחדים
                                 text = text.replace('שעה', '').replace("'", '').replace('"', '').replace('״', '').replace('׳', '').strip()
                                 if ':' in text and len(text) >= 4 and len(text) <= 5:
@@ -175,7 +166,7 @@ class YouthCupsScraper:
                         'category': category,
                         'index': index + 1,
                         'date': date,
-                        'time': match_time,  # יכול להיות None או שעה בפורמט "HH:MM"
+                        'time': match_time,  # כעת יכול להיות None או שעה תקינה
                         'homeTeam': home_team,
                         'awayTeam': away_team,
                         'field': field,
@@ -186,7 +177,6 @@ class YouthCupsScraper:
                         'status': 'finished' if result else 'upcoming'
                     })
                 except Exception as e:
-                    print(f"  ⚠️ שגיאה בשורה {index}: {e}")
                     continue
             
             print(f"  ✅ {len(matches)} משחקים")
@@ -215,34 +205,81 @@ class YouthCupsScraper:
         self.driver.quit()
 
 
-def upload_to_server(matches):
-    """שלח נתונים לשרת"""
-    print(f"\n📤 שולח נתונים לשרת...")
+def setup_git():
+    """הגדר Git עם Token"""
+    print("\n🔧 מגדיר Git...")
     
     try:
-        response = requests.post(
-            API_URL,
-            json=matches,
-            headers={
-                'X-API-Key': API_KEY,
-                'Content-Type': 'application/json'
-            },
-            timeout=30
-        )
+        # הגדר משתמש
+        subprocess.run(['git', 'config', '--global', 'user.email', GITHUB_EMAIL], check=True)
+        subprocess.run(['git', 'config', '--global', 'user.name', GITHUB_NAME], check=True)
         
-        if response.status_code == 200:
-            print(f"✅ השרת עודכן בהצלחה!")
+        # Clone או pull
+        repo_url = f"https://{GITHUB_TOKEN}@github.com/{GITHUB_REPO}.git"
+        
+        if not os.path.exists('repo'):
+            print("📦 Cloning repository...")
+            subprocess.run(['git', 'clone', repo_url, 'repo'], check=True)
+        else:
+            print("📥 Pulling latest changes...")
+            os.chdir('repo')
+            subprocess.run(['git', 'pull'], check=True)
+            os.chdir('..')
+        
+        print("✅ Git מוכן!")
+        return True
+    except Exception as e:
+        print(f"❌ שגיאה בהגדרת Git: {e}")
+        return False
+
+
+def save_to_github(matches):
+    """שמור נתונים ודחוף ל-GitHub"""
+    print(f"\n📤 שומר ל-GitHub...")
+    
+    try:
+        # כנס לתיקיית הRepo
+        os.chdir('repo')
+        
+        # שמור JSON
+        with open('matches.json', 'w', encoding='utf-8') as f:
+            json.dump(matches, f, ensure_ascii=False, indent=2)
+        
+        print("✅ matches.json נשמר")
+        
+        # Commit & Push
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        
+        subprocess.run(['git', 'add', 'matches.json'], check=True)
+        subprocess.run(['git', 'commit', '-m', f'Update matches - {timestamp}'], check=True)
+        subprocess.run(['git', 'push'], check=True)
+        
+        print(f"✅ נדחף ל-GitHub בהצלחה!")
+        
+        # חזור לתיקייה הראשית
+        os.chdir('..')
+        return True
+        
+    except subprocess.CalledProcessError as e:
+        if 'nothing to commit' in str(e):
+            print("💤 אין שינויים לעדכן")
+            os.chdir('..')
             return True
         else:
-            print(f"❌ שגיאה: {response.status_code} - {response.text}")
+            print(f"❌ שגיאה: {e}")
+            os.chdir('..')
             return False
     except Exception as e:
-        print(f"❌ שגיאה בשליחה: {e}")
+        print(f"❌ שגיאה: {e}")
+        try:
+            os.chdir('..')
+        except:
+            pass
         return False
 
 
 def should_update(matches):
-    """בדוק אם צריך לעדכן (האם יש משחקים פעילים)"""
+    """בדוק אם צריך לעדכן"""
     now = datetime.now()
     
     for match in matches:
@@ -250,11 +287,9 @@ def should_update(matches):
             continue
         
         try:
-            # המר תאריך
             date_parts = match['date'].split('/')
             day, month, year = int(date_parts[0]), int(date_parts[1]), int(date_parts[2])
             
-            # שעה
             if match.get('time'):
                 hour, minute = match['time'].split(':')
                 hour, minute = int(hour), int(minute)
@@ -262,8 +297,6 @@ def should_update(matches):
                 hour, minute = 19, 0
             
             match_dt = datetime(year, month, day, hour, minute)
-            
-            # בדוק חלון זמן: 30 דקות לפני עד שעה אחרי
             start = match_dt - timedelta(minutes=30)
             end = match_dt + timedelta(hours=1)
             
@@ -278,7 +311,12 @@ def should_update(matches):
 def main():
     """פונקציה ראשית"""
     print(f"\n🕐 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"🌍 API URL: {API_URL}")
+    print(f"📂 Repository: {GITHUB_REPO}")
+    
+    # הגדר Git
+    if not setup_git():
+        print("❌ לא ניתן להמשיך בלי Git")
+        return
     
     scraper = YouthCupsScraper()
     
@@ -292,11 +330,12 @@ def main():
         
         # בדוק אם צריך לעדכן
         if should_update(matches):
-            print(f"\n⚡ יש משחקים פעילים - מעדכן!")
-            upload_to_server(matches)
+            print(f"\n⚡ יש משחקים פעילים - מעדכן GitHub!")
+            save_to_github(matches)
         else:
             print(f"\n💤 אין משחקים פעילים - לא מעדכן")
-            print(f"   (עדכון יקרה רק 30 דקות לפני עד שעה אחרי משחקים)")
+            # אבל נשמור פעם אחת בכל מקרה
+            save_to_github(matches)
     
     except Exception as e:
         print(f"\n❌ שגיאה כללית: {e}")
