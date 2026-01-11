@@ -261,7 +261,11 @@
         }
         
         function isMatchLive(match) {
-            if (match.status === 'finished' || !match.time) return false;
+            // אם יש הארכה או פנדלים - בטוח נגמר
+            if (match.extraTime || match.penalties) return false;
+            
+            // אם אין שעה - לא יכול להיות חי
+            if (!match.time) return false;
             
             try {
                 const [day, month, year] = match.date.split('/').map(Number);
