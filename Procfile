@@ -1,1 +1,1 @@
-clock: python railway_clock.py
+web: python railway_clock.py
