@@ -2152,25 +2152,6 @@
     "category": "ילדות א'",
     "index": 26,
     "date": "12/01/2026",
-    "time": null,
-    "homeTeam": "מכבי עירוני קרית אתא",
-    "awayTeam": "מכבי ע. כפר יונה",
-    "field": "",
-    "score": {
-      "home": null,
-      "away": null
-    },
-    "extraTime": null,
-    "penalties": null,
-    "link": "",
-    "status": "upcoming"
-  },
-  {
-    "cupId": 718,
-    "cupName": "גביע המדינה לילדות א' ע\"ש יהל שרעבי ז\"ל",
-    "category": "ילדות א'",
-    "index": 27,
-    "date": "12/01/2026",
     "time": "18:15",
     "homeTeam": "מכבי בנות אשקלון",
     "awayTeam": "הפועל בנות הבית האדום ב''ש",
@@ -2188,7 +2169,7 @@
     "cupId": 718,
     "cupName": "גביע המדינה לילדות א' ע\"ש יהל שרעבי ז\"ל",
     "category": "ילדות א'",
-    "index": 28,
+    "index": 27,
     "date": "12/01/2026",
     "time": "18:20",
     "homeTeam": "מכבי כשרונות חדרה",
@@ -2207,12 +2188,31 @@
     "cupId": 718,
     "cupName": "גביע המדינה לילדות א' ע\"ש יהל שרעבי ז\"ל",
     "category": "ילדות א'",
-    "index": 29,
+    "index": 28,
     "date": "12/01/2026",
     "time": "19:00",
     "homeTeam": "הפועל רעננה",
     "awayTeam": "עירוני ראש העין",
     "field": "רעננה פארק דרומי",
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "extraTime": null,
+    "penalties": null,
+    "link": "",
+    "status": "upcoming"
+  },
+  {
+    "cupId": 718,
+    "cupName": "גביע המדינה לילדות א' ע\"ש יהל שרעבי ז\"ל",
+    "category": "ילדות א'",
+    "index": 29,
+    "date": "12/01/2026",
+    "time": "19:15",
+    "homeTeam": "מכבי עירוני קרית אתא",
+    "awayTeam": "מכבי ע. כפר יונה",
+    "field": "כפר יונה",
     "score": {
       "home": null,
       "away": null
