@@ -14,8 +14,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 # הגדרות מהמשתני סביבה
-API_URL = os.getenv('API_URL', 'https://yty.s904.upress.link/api/update.php')
-API_KEY = os.getenv('API_KEY', 'change-this-to-secret-key')
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
+GITHUB_REPO = os.getenv('GITHUB_REPO', 'harelbh/football-youth-cups-scraper')
+GITHUB_EMAIL = os.getenv('GITHUB_EMAIL', 'bot@railway.app')
+GITHUB_NAME = os.getenv('GITHUB_NAME', 'Railway Bot')
 
 # רשימת הליגות
 YOUTH_CUPS = [
