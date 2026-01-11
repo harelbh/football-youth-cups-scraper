@@ -2628,8 +2628,8 @@
     "index": 11,
     "date": "14/01/2026",
     "time": null,
-    "homeTeam": "בנות מכבי פתח תקוה",
-    "awayTeam": "הפועל הוד השרון",
+    "homeTeam": "מכבי כשרונות חדרה",
+    "awayTeam": "מ.כ. בנות טירה",
     "field": "",
     "score": {
       "home": null,
@@ -2646,10 +2646,10 @@
     "category": "ילדות ב'",
     "index": 12,
     "date": "14/01/2026",
-    "time": null,
-    "homeTeam": "מכבי כשרונות חדרה",
-    "awayTeam": "מ.כ. בנות טירה",
-    "field": "",
+    "time": "17:40",
+    "homeTeam": "בנות מכבי פתח תקוה",
+    "awayTeam": "הפועל הוד השרון",
+    "field": "פתח תקוה מושבה צפוני חדש",
     "score": {
       "home": null,
       "away": null
