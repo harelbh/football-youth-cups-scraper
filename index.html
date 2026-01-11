@@ -282,6 +282,12 @@
         }
         
         function getMatchMinute(match) {
+            // אם יש דקה חיה מהאתר - השתמש בה!
+            if (match.liveMinute) {
+                return match.liveMinute + "'";
+            }
+            
+            // אחרת - חשב (fallback)
             if (!match.time) return null;
             
             try {
