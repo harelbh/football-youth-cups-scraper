@@ -160,14 +160,34 @@ class YouthCupsScraper:
                         except:
                             pass
                     
-                    # קביעת סטטוס פשוטה
+                    # קביעת סטטוס - בדיקה חכמה
                     status = 'upcoming'
+                    
                     if extra_time or penalties:
                         # יש הארכה או פנדלים - בטוח נגמר
                         status = 'finished'
                     elif home_score is not None and away_score is not None:
-                        # יש תוצאה - סמן כ-live והדשבורד יבדוק בזמן אמת
-                        status = 'live'
+                        # יש תוצאה - צריך לבדוק אם המשחק עדיין חי
+                        if date and match_time:
+                            try:
+                                from datetime import datetime
+                                day, month, year = date.split('/')
+                                hour, minute = match_time.split(':')
+                                match_dt = datetime(int(year), int(month), int(day), int(hour), int(minute))
+                                now = datetime.now()
+                                diff_minutes = (now - match_dt).total_seconds() / 60
+                                
+                                # חי רק אם התחיל לפני 0-120 דקות
+                                if 0 <= diff_minutes <= 120:
+                                    status = 'live'
+                                else:
+                                    status = 'finished'  # עבר זמן רב מדי
+                            except:
+                                # אם יש בעיה בפרסור - נניח שנגמר
+                                status = 'finished'
+                        else:
+                            # אין מידע על זמן - אם יש תוצאה נניח שנגמר
+                            status = 'finished'
                     
                     matches.append({
                         'cupId': cup_id,
@@ -223,16 +243,17 @@ def setup_git():
         subprocess.run(['git', 'config', '--global', 'user.email', GITHUB_EMAIL], check=True)
         subprocess.run(['git', 'config', '--global', 'user.name', GITHUB_NAME], check=True)
         
-        # Clone מחדש כל פעם (למנוע קונפליקטים)
+        # Clone או pull
         repo_url = f"https://{GITHUB_TOKEN}@github.com/{GITHUB_REPO}.git"
         
-        if os.path.exists('repo'):
-            print("🗑️  מוחק repo ישן...")
-            import shutil
-            shutil.rmtree('repo')
-        
-        print("📦 Cloning repository...")
-        subprocess.run(['git', 'clone', repo_url, 'repo'], check=True)
+        if not os.path.exists('repo'):
+            print("📦 Cloning repository...")
+            subprocess.run(['git', 'clone', repo_url, 'repo'], check=True)
+        else:
+            print("📥 Pulling latest changes...")
+            os.chdir('repo')
+            subprocess.run(['git', 'pull'], check=True)
+            os.chdir('..')
         
         print("✅ Git מוכן!")
         return True
