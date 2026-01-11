@@ -81,16 +81,20 @@ class YouthCupsScraper:
                     field_elements = row.find_elements(By.CSS_SELECTOR, '.table_col.align_content')
                     field = field_elements[2].text.replace('מגרש', '').strip() if len(field_elements) > 2 else ''
                     
-                    # שעה - חיפוש בעמודת השעה
+                    # שעה - חיפוש בעמודת השעה (עם DEBUG)
                     match_time = None
                     
                     try:
                         # חיפוש העמודה שיש בה span עם "שעה"
                         time_cols = row.find_elements(By.XPATH, ".//div[@class='table_col'][.//span[@class='sr-only' and text()='שעה']]")
+                        
                         if time_cols:
                             time_text = time_cols[0].text.strip()
+                            print(f"      DEBUG: נמצאה עמודת שעה, טקסט מקורי: '{time_text}'")
+                            
                             # הטקסט יכול להיות "שעה14:00" או "14:00"
                             time_text = time_text.replace('שעה', '').strip()
+                            print(f"      DEBUG: אחרי ניקוי: '{time_text}'")
                             
                             # בדיקה שזו שעה תקינה
                             if ':' in time_text:
@@ -101,17 +105,31 @@ class YouthCupsScraper:
                                         minute = int(parts[1])
                                         if 0 <= hour <= 23 and 0 <= minute <= 59:
                                             match_time = time_text
-                                    except:
-                                        pass
+                                            print(f"      ✅ שעה נמצאה: {match_time}")
+                                        else:
+                                            print(f"      ❌ שעה לא תקינה: {hour}:{minute}")
+                                    except Exception as e:
+                                        print(f"      ❌ שגיאה בפרסור: {e}")
+                            else:
+                                print(f"      ❌ אין ':' בטקסט")
+                        else:
+                            print(f"      ⚠️  לא נמצאה עמודת שעה")
+                            
                     except Exception as e:
-                        pass
+                        print(f"      ❌ שגיאה בחיפוש שעה: {e}")
                     
                     # ניסיון גיבוי: חיפוש כללי
                     if not match_time:
                         try:
                             all_cols = row.find_elements(By.CSS_SELECTOR, '.table_col')
-                            for col in all_cols:
-                                text = col.text.strip().replace('שעה', '').strip()
+                            print(f"      🔍 גיבוי: בודק {len(all_cols)} עמודות")
+                            
+                            for idx, col in enumerate(all_cols):
+                                text = col.text.strip()
+                                if text:  # רק אם יש טקסט
+                                    print(f"      עמודה {idx}: '{text}'")
+                                    
+                                text = text.replace('שעה', '').strip()
                                 if ':' in text and len(text) >= 4 and len(text) <= 5:
                                     parts = text.split(':')
                                     if len(parts) == 2:
@@ -120,11 +138,12 @@ class YouthCupsScraper:
                                             minute = int(parts[1])
                                             if 0 <= hour <= 23 and 0 <= minute <= 59:
                                                 match_time = text
+                                                print(f"      ✅ שעה נמצאה בגיבוי: {match_time}")
                                                 break
                                         except:
                                             continue
-                        except:
-                            pass
+                        except Exception as e:
+                            print(f"      ❌ שגיאה בגיבוי: {e}")
                     
                     result = row.find_element(By.CSS_SELECTOR, '.result').text.replace('תוצאה', '').strip() if row.find_elements(By.CSS_SELECTOR, '.result') else ''
                     
