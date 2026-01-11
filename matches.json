@@ -395,7 +395,7 @@
     },
     "extraTime": null,
     "penalties": null,
-    "link": "",
+    "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117191",
     "status": "upcoming"
   },
   {
@@ -643,7 +643,7 @@
     "extraTime": null,
     "penalties": null,
     "link": "",
-    "status": "finished"
+    "status": "upcoming"
   },
   {
     "cupId": 587,
@@ -833,7 +833,7 @@
     "extraTime": null,
     "penalties": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117279",
-    "status": "finished"
+    "status": "upcoming"
   },
   {
     "cupId": 587,
@@ -1131,13 +1131,13 @@
     "awayTeam": "בית\"ר י-ם שמואל \"צו פיוס\"",
     "field": "תל אביב וולפסון 2",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
     "extraTime": null,
     "penalties": null,
-    "link": "",
-    "status": "upcoming"
+    "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118127",
+    "status": "finished"
   },
   {
     "cupId": 588,
