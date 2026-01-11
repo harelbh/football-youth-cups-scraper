@@ -413,11 +413,11 @@
       "home": 3,
       "away": 3
     },
-    "extraTime": null,
-    "penalties": null,
+    "extraTime": "3-3",
+    "penalties": "2-2",
     "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117191",
-    "status": "live"
+    "status": "finished"
   },
   {
     "cupId": 586,
@@ -435,7 +435,7 @@
     },
     "extraTime": null,
     "penalties": null,
-    "liveMinute": "משחק live, דקה\n90",
+    "liveMinute": "משחק live, דקה\n100",
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117183",
     "status": "live"
   },
@@ -1197,7 +1197,7 @@
     "penalties": null,
     "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118127",
-    "status": "live"
+    "status": "finished"
   },
   {
     "cupId": 588,
@@ -1495,7 +1495,7 @@
     },
     "extraTime": null,
     "penalties": null,
-    "liveMinute": "משחק live, דקה\n31",
+    "liveMinute": "משחק live, דקה\nהפסקה",
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118312",
     "status": "live"
   },
