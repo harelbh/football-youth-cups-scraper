@@ -15,6 +15,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -34,6 +35,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -53,6 +55,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -72,6 +75,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -91,6 +95,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -110,6 +115,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -129,6 +135,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -148,6 +155,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -167,6 +175,7 @@
     },
     "extraTime": "3-3",
     "penalties": "4-5",
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117187",
     "status": "finished"
   },
@@ -186,6 +195,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117181",
     "status": "finished"
   },
@@ -205,6 +215,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117185",
     "status": "finished"
   },
@@ -224,6 +235,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117180",
     "status": "finished"
   },
@@ -243,6 +255,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117184",
     "status": "finished"
   },
@@ -262,6 +275,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117190",
     "status": "finished"
   },
@@ -281,6 +295,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117192",
     "status": "finished"
   },
@@ -300,6 +315,7 @@
     },
     "extraTime": "3-3",
     "penalties": "5-4",
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117186",
     "status": "finished"
   },
@@ -319,6 +335,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117193",
     "status": "finished"
   },
@@ -338,6 +355,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117182",
     "status": "finished"
   },
@@ -357,6 +375,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117189",
     "status": "finished"
   },
@@ -376,6 +395,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117194",
     "status": "finished"
   },
@@ -390,13 +410,14 @@
     "awayTeam": "עירוני טבריה \"צו פיוס\"",
     "field": "תל אביב ספורטק צפון  מזרחי",
     "score": {
-      "home": 2,
-      "away": 2
+      "home": 3,
+      "away": 3
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": "משחק live, דקה\n117",
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117191",
-    "status": "finished"
+    "status": "live"
   },
   {
     "cupId": 586,
@@ -414,8 +435,9 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": "משחק live, דקה\n57",
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117183",
-    "status": "upcoming"
+    "status": "live"
   },
   {
     "cupId": 586,
@@ -433,6 +455,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -452,6 +475,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -471,6 +495,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "finished"
   },
@@ -490,6 +515,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1116658",
     "status": "finished"
   },
@@ -509,6 +535,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "finished"
   },
@@ -528,6 +555,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1116656",
     "status": "finished"
   },
@@ -547,6 +575,7 @@
     },
     "extraTime": "1-1",
     "penalties": "5-4",
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1116657",
     "status": "finished"
   },
@@ -566,6 +595,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1116661",
     "status": "finished"
   },
@@ -585,6 +615,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1116660",
     "status": "finished"
   },
@@ -604,6 +635,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -623,6 +655,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117290",
     "status": "finished"
   },
@@ -642,6 +675,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -661,6 +695,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117280",
     "status": "finished"
   },
@@ -680,6 +715,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117281",
     "status": "finished"
   },
@@ -699,6 +735,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117285",
     "status": "finished"
   },
@@ -718,6 +755,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117288",
     "status": "finished"
   },
@@ -737,6 +775,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117283",
     "status": "finished"
   },
@@ -756,6 +795,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117278",
     "status": "finished"
   },
@@ -775,6 +815,7 @@
     },
     "extraTime": "2-2",
     "penalties": "5-4",
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117293",
     "status": "finished"
   },
@@ -794,6 +835,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117292",
     "status": "finished"
   },
@@ -813,6 +855,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117287",
     "status": "finished"
   },
@@ -832,6 +875,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117279",
     "status": "upcoming"
   },
@@ -851,6 +895,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117289",
     "status": "finished"
   },
@@ -870,6 +915,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -889,6 +935,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -908,6 +955,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -927,6 +975,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -946,6 +995,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -965,6 +1015,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -984,6 +1035,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1003,6 +1055,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1022,6 +1075,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1041,6 +1095,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1060,6 +1115,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1079,6 +1135,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118129",
     "status": "finished"
   },
@@ -1098,6 +1155,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118126",
     "status": "finished"
   },
@@ -1117,6 +1175,7 @@
     },
     "extraTime": "0-1",
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118128",
     "status": "finished"
   },
@@ -1136,8 +1195,9 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118127",
-    "status": "finished"
+    "status": "live"
   },
   {
     "cupId": 588,
@@ -1155,7 +1215,8 @@
     },
     "extraTime": null,
     "penalties": null,
-    "link": "",
+    "liveMinute": null,
+    "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118130",
     "status": "upcoming"
   },
   {
@@ -1174,6 +1235,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1193,6 +1255,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1212,6 +1275,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1231,6 +1295,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118319",
     "status": "finished"
   },
@@ -1250,6 +1315,7 @@
     },
     "extraTime": "0-0",
     "penalties": "5-6",
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118320",
     "status": "finished"
   },
@@ -1269,6 +1335,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118315",
     "status": "finished"
   },
@@ -1288,6 +1355,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118317",
     "status": "finished"
   },
@@ -1307,6 +1375,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118310",
     "status": "finished"
   },
@@ -1326,6 +1395,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118313",
     "status": "finished"
   },
@@ -1345,6 +1415,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118305",
     "status": "finished"
   },
@@ -1364,6 +1435,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118308",
     "status": "finished"
   },
@@ -1383,6 +1455,7 @@
     },
     "extraTime": "1-1",
     "penalties": "2-4",
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118307",
     "status": "finished"
   },
@@ -1402,6 +1475,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118314",
     "status": "finished"
   },
@@ -1421,7 +1495,8 @@
     },
     "extraTime": null,
     "penalties": null,
-    "link": "",
+    "liveMinute": null,
+    "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118312",
     "status": "upcoming"
   },
   {
@@ -1440,6 +1515,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1459,6 +1535,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1478,6 +1555,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1497,6 +1575,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1516,6 +1595,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1535,6 +1615,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1554,6 +1635,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1573,6 +1655,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1592,6 +1675,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1611,6 +1695,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1630,6 +1715,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1649,6 +1735,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1668,6 +1755,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1687,6 +1775,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117862",
     "status": "finished"
   },
@@ -1706,6 +1795,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117878",
     "status": "finished"
   },
@@ -1725,6 +1815,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1744,6 +1835,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1763,6 +1855,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1782,6 +1875,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1801,6 +1895,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1820,6 +1915,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1839,6 +1935,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1858,6 +1955,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1877,6 +1975,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1896,6 +1995,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1915,6 +2015,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1934,6 +2035,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1953,6 +2055,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1972,6 +2075,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -1991,6 +2095,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2010,6 +2115,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2029,6 +2135,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2048,6 +2155,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2067,6 +2175,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2086,6 +2195,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2105,6 +2215,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117871",
     "status": "finished"
   },
@@ -2124,6 +2235,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117856",
     "status": "finished"
   },
@@ -2143,6 +2255,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2162,6 +2275,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2181,6 +2295,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2200,6 +2315,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2219,6 +2335,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2238,6 +2355,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2257,6 +2375,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2276,6 +2395,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2295,6 +2415,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2314,6 +2435,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2333,6 +2455,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2352,6 +2475,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2371,6 +2495,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2390,6 +2515,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2409,6 +2535,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2428,6 +2555,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2447,6 +2575,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2466,6 +2595,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2485,6 +2615,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2504,6 +2635,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2523,6 +2655,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2542,6 +2675,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2561,6 +2695,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2580,6 +2715,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2599,6 +2735,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2618,6 +2755,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2637,6 +2775,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2656,6 +2795,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2675,6 +2815,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2694,6 +2835,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2713,6 +2855,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2732,6 +2875,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -2751,6 +2895,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117221",
     "status": "finished"
   },
@@ -2770,6 +2915,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117227",
     "status": "finished"
   },
@@ -2789,6 +2935,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117217",
     "status": "finished"
   },
@@ -2808,6 +2955,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117218",
     "status": "finished"
   },
@@ -2827,6 +2975,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117216",
     "status": "finished"
   },
@@ -2846,6 +2995,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117215",
     "status": "finished"
   },
@@ -2865,6 +3015,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117226",
     "status": "finished"
   },
@@ -2884,6 +3035,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117223",
     "status": "finished"
   },
@@ -2903,6 +3055,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117228",
     "status": "finished"
   },
@@ -2922,6 +3075,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117229",
     "status": "finished"
   },
@@ -2941,6 +3095,7 @@
     },
     "extraTime": "1-1",
     "penalties": "3-4",
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117225",
     "status": "finished"
   },
@@ -2960,6 +3115,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117220",
     "status": "finished"
   },
@@ -2979,6 +3135,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117219",
     "status": "finished"
   },
@@ -2998,6 +3155,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117214",
     "status": "finished"
   },
@@ -3017,6 +3175,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117224",
     "status": "finished"
   },
@@ -3036,6 +3195,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117222",
     "status": "finished"
   },
@@ -3055,6 +3215,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -3074,6 +3235,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -3093,6 +3255,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -3112,6 +3275,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -3131,6 +3295,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -3150,6 +3315,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -3169,6 +3335,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   },
@@ -3188,6 +3355,7 @@
     },
     "extraTime": null,
     "penalties": null,
+    "liveMinute": null,
     "link": "",
     "status": "upcoming"
   }
