@@ -160,34 +160,14 @@ class YouthCupsScraper:
                         except:
                             pass
                     
-                    # קביעת סטטוס חכמה
+                    # קביעת סטטוס פשוטה
                     status = 'upcoming'
                     if extra_time or penalties:
-                        # אם יש הארכה או פנדלים - המשחק בהחלט נגמר
+                        # יש הארכה או פנדלים - בטוח נגמר
                         status = 'finished'
                     elif home_score is not None and away_score is not None:
-                        # יש תוצאה - בדוק אם המשחק נגמר או חי
-                        # אם יש תוצאה אבל המשחק היה היום והשעה קרובה - ככל הנראה חי
-                        try:
-                            if date and match_time:
-                                from datetime import datetime
-                                day, month, year = date.split('/')[0], date.split('/')[1], date.split('/')[2]
-                                hour, minute = match_time.split(':')
-                                match_dt = datetime(int(year), int(month), int(day), int(hour), int(minute))
-                                now = datetime.now()
-                                diff_minutes = (now - match_dt).total_seconds() / 60
-                                
-                                # אם המשחק התחיל לפני 0-120 דקות וי ש תוצאה - זה חי
-                                if 0 <= diff_minutes <= 120:
-                                    status = 'live'
-                                else:
-                                    status = 'finished'
-                            else:
-                                # אין מידע על זמן - נניח שנגמר אם יש תוצאה
-                                status = 'finished'
-                        except:
-                            # אם יש בעיה בפרסור - נניח שנגמר
-                            status = 'finished'
+                        # יש תוצאה - סמן כ-live והדשבורד יבדוק בזמן אמת
+                        status = 'live'
                     
                     matches.append({
                         'cupId': cup_id,
