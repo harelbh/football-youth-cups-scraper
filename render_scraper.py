@@ -92,8 +92,10 @@ class YouthCupsScraper:
                             time_text = time_cols[0].text.strip()
                             print(f"      DEBUG: נמצאה עמודת שעה, טקסט מקורי: '{time_text}'")
                             
-                            # הטקסט יכול להיות "שעה14:00" או "14:00"
+                            # הטקסט יכול להיות "שעה14:00" או "14:00" או "14:00'"
                             time_text = time_text.replace('שעה', '').strip()
+                            # הסר גרשיים ותווים מיוחדים
+                            time_text = time_text.replace("'", '').replace('"', '').replace('״', '').replace('׳', '').strip()
                             print(f"      DEBUG: אחרי ניקוי: '{time_text}'")
                             
                             # בדיקה שזו שעה תקינה
@@ -128,8 +130,9 @@ class YouthCupsScraper:
                                 text = col.text.strip()
                                 if text:  # רק אם יש טקסט
                                     print(f"      עמודה {idx}: '{text}'")
-                                    
-                                text = text.replace('שעה', '').strip()
+                                
+                                # נקה תווים מיוחדים
+                                text = text.replace('שעה', '').replace("'", '').replace('"', '').replace('״', '').replace('׳', '').strip()
                                 if ':' in text and len(text) >= 4 and len(text) <= 5:
                                     parts = text.split(':')
                                     if len(parts) == 2:
