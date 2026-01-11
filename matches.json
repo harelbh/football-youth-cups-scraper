@@ -435,7 +435,7 @@
     },
     "extraTime": null,
     "penalties": null,
-    "liveMinute": "משחק live, דקה\n109",
+    "liveMinute": "משחק live, דקה\n113",
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1117183",
     "status": "live"
   },
@@ -1495,7 +1495,7 @@
     },
     "extraTime": null,
     "penalties": null,
-    "liveMinute": "משחק live, דקה\n40",
+    "liveMinute": "משחק live, דקה\n44",
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118312",
     "status": "live"
   },
@@ -1510,12 +1510,12 @@
     "awayTeam": "הפועל ניר רמה\"ש \"צו פיוס\"",
     "field": "ראשון לציון סופרלנד מערבי סינטטי",
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
     "extraTime": null,
     "penalties": null,
-    "liveMinute": "משחק live, דקה\n5",
+    "liveMinute": "משחק live, דקה\n9",
     "link": "https://www.football.org.ilhttps://www.football.org.il/national-cup-game/?game_id=1118309",
     "status": "live"
   },
