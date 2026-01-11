@@ -233,7 +233,7 @@ def setup_git():
         else:
             print("📥 Pulling latest changes...")
             os.chdir('repo')
-            subprocess.run(['git', 'pull'], check=True)
+            subprocess.run(['git', 'pull', '--rebase'], check=True)  # Added --rebase
             os.chdir('..')
         
         print("✅ Git מוכן!")
@@ -249,6 +249,10 @@ def save_to_github(matches, filename='leagues_matches.json'):
     
     try:
         os.chdir('repo')
+        
+        # Pull latest changes before saving
+        print("🔄 מסנכרן עם GitHub...")
+        subprocess.run(['git', 'pull', '--rebase'], check=True)
         
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(matches, f, ensure_ascii=False, indent=2)
